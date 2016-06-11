@@ -47,6 +47,7 @@ Bundle 'jiangmiao/auto-pairs'
 Bundle 'othree/html5.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'dracula/vim'
+Bundle 'lilydjwg/colorizer'
 
 if vundle_ready == 0
     echo 'Installing bundles...'
@@ -126,7 +127,6 @@ map <Leader>] :bn<CR>
 map <Leader>[ :bp<CR>
 " tab navigation
 map <Leader>tn :tabnew<CR>
-map <Leader>tc :tabclose<CR>
 map <Leader><Leader>] :tabn<CR>
 map <Leader><Leader>[ :tabp<CR>
 
