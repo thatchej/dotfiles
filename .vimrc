@@ -44,6 +44,9 @@ Bundle 'tpope/vim-surround'
 Bundle 'Yggdroot/indentLine'
 Bundle 'NLKNguyen/papercolor-theme'
 Bundle 'jiangmiao/auto-pairs'
+Bundle 'othree/html5.vim'
+Bundle 'pangloss/vim-javascript'
+Bundle 'dracula/vim'
 
 if vundle_ready == 0
     echo 'Installing bundles...'
@@ -63,14 +66,10 @@ autocmd vimenter * if !argc() | NERDTree | endif
 
 "syn on
 set t_Co=256   " This is may or may not needed.
+colorscheme Dracula
 
-colorscheme xoria256
-highlight LineNr term=bold cterm=NONE ctermbg=NONE gui=NONE guifg=#0ACBEE guibg=NONE
 " folding
 autocmd FileType mkd normal zR
-
-" remove trailing whitespace in puppet files
-autocmd FileType puppet autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " tagbar
 map <leader>t :TagbarOpenAutoClose<CR>
@@ -157,15 +156,11 @@ set ignorecase " Do case insensitive matching
 set smartcase  " Do smart case matching
 set incsearch  " Incremental search
 
-" undotree
-nnoremap <Leader>u :UndotreeToggle<cr>
-
 " indentLine
 let g:indentLine_color_term = 241
 
 " force airline to show up
 set laststatus=2
 
-noremap <Leader>s :%s/\s\+$//g<CR>
-
-let g:syntastic_ruby_checkers = ['rubocop', 'mri']
+" set line number to match dracula theme
+autocmd BufEnter * hi CursorLineNr ctermfg=175
