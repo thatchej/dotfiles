@@ -129,7 +129,7 @@ map <Leader>[ :bp<CR>
 map <Leader>tn :tabnew<CR>
 map <Leader><Leader>] :tabn<CR>
 map <Leader><Leader>[ :tabp<CR>
-
+map <Leader>w :bd<CR> :NERDTreeFocus<CR>
 
 noremap <Leader>= :Tab /=<CR>
 noremap <Leader><Leader>= :Tab /=><CR>
