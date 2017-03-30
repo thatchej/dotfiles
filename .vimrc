@@ -48,6 +48,7 @@ Bundle 'othree/html5.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'dracula/vim'
 Bundle 'lilydjwg/colorizer'
+Bundle 'leafgarland/typescript-vim'
 
 if vundle_ready == 0
     echo 'Installing bundles...'
@@ -67,7 +68,7 @@ autocmd vimenter * if !argc() | NERDTree | endif
 
 "syn on
 set t_Co=256   " This is may or may not needed.
-colorscheme Dracula
+colorscheme monokai-chris 
 
 " folding
 autocmd FileType mkd normal zR
